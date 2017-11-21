@@ -103,7 +103,7 @@ object MonomorphicBinarySearch {
   def binarySearch(ds: Array[Double], key: Double): Int = {
     @annotation.tailrec
     def go(low: Int, mid: Int, high: Int): Int = {
-      if (low > high) -mid - 1
+      if (low > high) -1
       else {
         val mid2 = (low + high) / 2
         val d = ds(mid2) // We index into an array using the same
@@ -125,7 +125,7 @@ object PolymorphicFunctions {
   def binarySearch[A](as: Array[A], key: A, gt: (A,A) => Boolean): Int = {
     @annotation.tailrec
     def go(low: Int, mid: Int, high: Int): Int = {
-      if (low > high) -mid - 1
+      if (low > high) -1
       else {
         val mid2 = (low + high) / 2
         val a = as(mid2)
